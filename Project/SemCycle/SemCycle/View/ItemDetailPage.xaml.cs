@@ -50,7 +50,12 @@ namespace SemCycle.Views
 							 select itm)
 							.FirstOrDefault<Item>();
 			list.Remove(listitem);
-			viewModel.Items = new ObservableCollection<Item>(list);
+			var Items = new ObservableCollection<Item>(list);
+            viewModel.Items.Clear();
+            foreach(var i in Items)
+            {
+                viewModel.Items.Add(i);
+            }
 		}
 
 		protected override void OnAppearing()
