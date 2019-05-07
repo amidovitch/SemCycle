@@ -19,9 +19,6 @@ namespace SemCycle.Views
 			menuItems = new List<HomeMenuItem>
 			{
 				new HomeMenuItem {Id = MenuItemType.First, Title="First sem" },
-				new HomeMenuItem {Id = MenuItemType.Second, Title="Second sem" },
-				new HomeMenuItem {Id = MenuItemType.Third, Title="Third sem" },
-				new HomeMenuItem {Id = MenuItemType.Fourth, Title="Fourth sem" },
 			};
 
 			ListViewMenu.ItemsSource = menuItems;
@@ -43,13 +40,30 @@ namespace SemCycle.Views
 		{
 			switch (menuItems.Count)
 			{
-				case 4:
-					{
-						menuItems.Add(new HomeMenuItem { Id = MenuItemType.Fifth, Title = "Fifth sem" });
-						ListViewMenu.ItemsSource = null;
-						ListViewMenu.ItemsSource = menuItems;
-						break;
-					}
+                case 0:
+                    menuItems.Add(new HomeMenuItem { Id = MenuItemType.First, Title = "First sem" });
+                    ListViewMenu.ItemsSource = null;
+                    ListViewMenu.ItemsSource = menuItems;
+                    break;
+                case 1:
+                    menuItems.Add(new HomeMenuItem { Id = MenuItemType.Second, Title = "Second sem" });
+                    ListViewMenu.ItemsSource = null;
+                    ListViewMenu.ItemsSource = menuItems;
+                    break;
+                case 2:
+                    menuItems.Add(new HomeMenuItem { Id = MenuItemType.Third, Title = "Third sem" });
+                    ListViewMenu.ItemsSource = null;
+                    ListViewMenu.ItemsSource = menuItems;
+                    break;
+                case 3:
+                    menuItems.Add(new HomeMenuItem { Id = MenuItemType.Fourth, Title = "Fourth sem" });
+                    ListViewMenu.ItemsSource = null;
+                    ListViewMenu.ItemsSource = menuItems;
+                    break;
+                case 4:
+					menuItems.Add(new HomeMenuItem { Id = MenuItemType.Fifth, Title = "Fifth sem" });
+					ListViewMenu.ItemsSource = null;
+					ListViewMenu.ItemsSource = menuItems;
 					break;
 				case 5:
 					menuItems.Add(new HomeMenuItem { Id = MenuItemType.Sixth, Title = "Sixth sem" });
