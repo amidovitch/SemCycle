@@ -28,7 +28,7 @@ namespace SemCycle.Views
 
 		async void Save_Clicked(object sender, EventArgs e)
 		{
-			MessagingCenter.Send(this, "AddItem", Item);
+			MessagingCenter.Send(this, "AddDiscipline", Item);
 			await Navigation.PopModalAsync();
 		}
 

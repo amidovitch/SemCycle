@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using SemCycle.DataBase;
 
 namespace SemCycle.Views
 {
@@ -16,8 +17,8 @@ namespace SemCycle.Views
 			InitializeComponent();
 
 			MasterBehavior = MasterBehavior.Popover;
-
-			MenuPages.Add((int)MenuItemType.First, (NavigationPage)Detail);
+            Title = "First sem";
+            MenuPages.Add((int)MenuItemType.First, (NavigationPage)Detail);
 		}
 
 		public async Task NavigateFromMenu(int id)
@@ -27,28 +28,28 @@ namespace SemCycle.Views
 				switch (id)
 				{
 					case (int)MenuItemType.First:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("First sem")));
 						break;
 					case (int)MenuItemType.Second:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Second sem")));
 						break;
 					case (int)MenuItemType.Third:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Third sem")));
 						break;
 					case (int)MenuItemType.Fourth:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Fourth sem")));
 						break;
 					case (int)MenuItemType.Fifth:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Fifth sem")));
 						break;
 					case (int)MenuItemType.Sixth:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Sixth sem")));
 						break;
 					case (int)MenuItemType.Seventh:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Seventh sem")));
 						break;
 					case (int)MenuItemType.Eight:
-						MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+						MenuPages.Add(id, new NavigationPage(new ItemsPage("Eight sem")));
 						break;
 				}
 			}

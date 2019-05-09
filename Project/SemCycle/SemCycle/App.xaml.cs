@@ -2,7 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SemCycle.Views;
-
+using SemCycle.DataBase;
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace SemCycle
 {
@@ -11,7 +11,7 @@ namespace SemCycle
         public App()
         {
             InitializeComponent();
-
+            
             MainPage = new MainPage();
         }
 

@@ -21,12 +21,22 @@ namespace SemCycle.Views
 		public ItemsPage()
 		{
 			InitializeComponent();
-			viewModel = new ItemsViewModel();
+			viewModel = new ItemsViewModel(false);
 			
 			BindingContext = viewModel;
 		}
 
-		async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
+        public ItemsPage(string title)
+        {
+            InitializeComponent();
+
+            Title = title;
+            viewModel = new ItemsViewModel(false);
+
+            BindingContext = viewModel;
+        }
+
+        async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)
 		{
 			var item = args.SelectedItem as Item;
 			if (item == null)

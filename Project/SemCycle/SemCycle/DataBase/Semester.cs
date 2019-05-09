@@ -14,18 +14,14 @@ namespace SemCycle.DataBase
         {
 
         }
-        public void ClearDiscipline()
-        {
-            DisciplineList.Clear();
-        }
         public Semester(int num)
         {
             semNumber = num;
         }
-      /*  public Discipline getDiscipline(String name)
+        public void ClearDiscipline()
         {
-            return DisciplineList[1];
-        }*/
+            DisciplineList.Clear();
+        }
         public void addDiscipline(Discipline inputDisc)
         {
             DisciplineList.Add(inputDisc);
